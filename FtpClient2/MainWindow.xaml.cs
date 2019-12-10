@@ -27,12 +27,13 @@ namespace FtpClient2
 
         private void ReceiveClick(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Receive");
+            //ftp.download(TODO)
         }
 
-        private void ReceiveSend(object sender, RoutedEventArgs e)
+        private void SendClick(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Send");
+            Ftp ftp = new Ftp(serverAddress.Text, loginBox.Text, passBox.Text);
+            ftp.upload(null,@"C:\Config.cfg");
         }
 
         private void SaveClick(object sender, RoutedEventArgs e)

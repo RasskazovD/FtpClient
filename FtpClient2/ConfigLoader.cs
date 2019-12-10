@@ -9,18 +9,7 @@ namespace FtpClient2
     {
         public string Main()
         {
-            String line;
-            try
-            {
-                using (StreamReader sr = new StreamReader(@"C:\Config.txt"))
-                {
-                    line = sr.ReadToEnd();
-                }
-            }
-            catch(IOException e)
-            {
-                line = "No config file";
-            }
+            String line = File.ReadAllText("Config.cfg");
             return line;
         }
     }

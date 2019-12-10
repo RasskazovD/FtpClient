@@ -5,16 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FtpClient2"
         mc:Ignorable="d"
-        Title="FTP Client" Height="188" Width="314">
+        Title="FTP Client" Height="219" Width="344">
     <Grid>
         <TextBlock HorizontalAlignment="Left" Margin="10,13,0,0" Text="Ftp server:" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.499,0.504"/>
         <TextBlock HorizontalAlignment="Left" Margin="99,13,0,0" Text="Login" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="157,13,0,0" Text="Password" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="99,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50"/>
-        <TextBox HorizontalAlignment="Left" Margin="157,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="loginBox" HorizontalAlignment="Left" Margin="99,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="passBox" HorizontalAlignment="Left" Margin="157,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,60,0,0" Text="Import" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Margin="51,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="139"/>
-        <Button Content="Send" HorizontalAlignment="Left" Margin="93,138,0,0" VerticalAlignment="Top" Click="ReceiveSend"/>
+        <Button Content="Send" HorizontalAlignment="Left" Margin="93,138,0,0" VerticalAlignment="Top" Click="SendClick"/>
         <Button Content="Receive" HorizontalAlignment="Left" Margin="10,138,0,0" VerticalAlignment="Top" Click="ReceiveClick"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,84,0,0" Text="Index" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Margin="51,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="139"/>
