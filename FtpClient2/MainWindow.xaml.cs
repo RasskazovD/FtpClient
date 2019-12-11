@@ -1,17 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.Net;
+
 
 namespace FtpClient2
 {
@@ -27,18 +17,19 @@ namespace FtpClient2
 
         private void ReceiveClick(object sender, RoutedEventArgs e)
         {
-            //ftp.download(TODO)
+            var ftp = new Ftp("ftp://" + serverAddress.Text + "/Config.cfg", loginBox.Text, passBox.Text);
+            ftp.download();
         }
 
         private void SendClick(object sender, RoutedEventArgs e)
         {
-            Ftp ftp = new Ftp(serverAddress.Text, loginBox.Text, passBox.Text);
-            ftp.upload(null,@"C:\Config.cfg");
+            var ftp = new Ftp("ftp://" + serverAddress.Text + "/Config.cfg", loginBox.Text, passBox.Text);
+            ftp.upload();
         }
 
         private void SaveClick(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Save");
+           
         }
     }
 }
