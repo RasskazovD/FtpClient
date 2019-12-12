@@ -7,10 +7,20 @@ namespace FtpClient2
 {
     class ConfigLoader
     {
-        public string Main()
+        string line;
+        public List<string> Main()
         {
-            String line = File.ReadAllText("Config.cfg");
-            return line;
+            List<string> resultConfig = new List<string>();
+            StreamReader file = new StreamReader("Config.cfg");
+            while ((line = file.ReadLine()) != null)
+            {
+                if (!line.StartsWith("#"))
+                {
+                    resultConfig.Add(line);
+                }
+            }
+
+            return resultConfig;
         }
     }
 }

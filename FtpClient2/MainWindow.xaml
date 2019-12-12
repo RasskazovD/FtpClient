@@ -13,12 +13,16 @@
         <TextBox x:Name="loginBox" HorizontalAlignment="Left" Margin="99,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50"/>
         <TextBox x:Name="passBox" HorizontalAlignment="Left" Margin="157,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,60,0,0" Text="Import" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="51,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="139"/>
-        <Button Content="Send" HorizontalAlignment="Left" Margin="93,138,0,0" VerticalAlignment="Top" Click="SendClick"/>
-        <Button Content="Receive" HorizontalAlignment="Left" Margin="10,138,0,0" VerticalAlignment="Top" Click="ReceiveClick"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,84,0,0" Text="Index" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="51,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="139"/>
+        <TextBox x:Name="Import" HorizontalAlignment="Left" Margin="51,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="139"/>
+        <Button Content="Send" HorizontalAlignment="Left" Margin="83,169,0,0" VerticalAlignment="Top" Click="SendClick"/>
+        <Button Content="Receive" HorizontalAlignment="Left" Margin="10,169,0,0" VerticalAlignment="Top" Click="ReceiveClick"/>
+        <TextBlock HorizontalAlignment="Left" Margin="221,13,0,0" Text="Index" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox x:Name="Index" HorizontalAlignment="Left" Margin="221,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="79"/>
         <TextBox x:Name="serverAddress" HorizontalAlignment="Left" Margin="10,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
-        <Button Content="Save" HorizontalAlignment="Left" Margin="230,61,0,0" VerticalAlignment="Top" Click="SaveClick"/>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="305,169,0,0" VerticalAlignment="Top" Click="SaveClick"/>
+        <TextBox x:Name="ImportMask" HorizontalAlignment="Left" Margin="214,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="ExportMask" HorizontalAlignment="Left" Margin="214,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,84,0,0" Text="Export" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox x:Name="Export" HorizontalAlignment="Left" Margin="51,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="139"/>
     </Grid>
 </Window>
