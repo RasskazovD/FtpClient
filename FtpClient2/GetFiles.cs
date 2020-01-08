@@ -9,13 +9,8 @@ namespace FtpClient2
     {
         public List<string> FindFiles(string dir_name, string patterns, bool search_subdirectories)
         {
-            // Make the result list.
             List<string> files = new List<string>();
-
-            // Get the patterns.
             string[] pattern_array = patterns.Split(';');
-
-            // Search.
             SearchOption search_option = SearchOption.TopDirectoryOnly;
             if (search_subdirectories)
                 search_option = SearchOption.AllDirectories;
@@ -27,7 +22,6 @@ namespace FtpClient2
                     if (!files.Contains(filename)) files.Add(filename);
                 }
             }
-            // Return the result.
             return files;
         }
     }

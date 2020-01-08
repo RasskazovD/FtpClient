@@ -5,17 +5,17 @@ namespace FtpClient2
 {
     class Ftp
     {
-        public void upload(String serverAddress, String log, String pass)
+        public void upload(String serverAddress, String log, String pass, String file)
         {
             var ftp = new WebClient();
             ftp.Credentials = new NetworkCredential(log, pass);
-            ftp.UploadFile("ftp://localhost/Config.cfg", WebRequestMethods.Ftp.UploadFile, @"C:\\Config.cfg");
+            ftp.UploadFile(serverAddress, WebRequestMethods.Ftp.UploadFile, file);
         }
-        public void download(String serverAddress, String log, String pass)
+        public void download(String serverAddress, String log, String pass, String file)
         {
             var ftp = new WebClient();
             ftp.Credentials = new NetworkCredential(log, pass);
-            ftp.DownloadFile("ftp://localhost/Config.cfg", @"D:\\Test\Config.cfg");
+            ftp.DownloadFile(serverAddress, file);
         }
     }
 }

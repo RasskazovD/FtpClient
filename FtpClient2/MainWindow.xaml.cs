@@ -17,17 +17,21 @@ namespace FtpClient2
 
         private void ReceiveClick(object sender, RoutedEventArgs e)
         {
-           //var ftp = new Ftp("ftp://" + serverAddress.Text + "/Config.cfg", loginBox.Text, passBox.Text);
-           //ftp.download();
+            var files = new GetFiles().FindFiles(Import.Text, ImportMask.Text, false); 
+            var ftp = new Ftp();
+            foreach (string i in files)
+            {
+                ftp.download(serverAddress.Text, loginBox.Text, passBox.Text, i);
+            }
         }
 
         private void SendClick(object sender, RoutedEventArgs e)
         {
-            var files = new GetFiles().FindFiles(Import.Text,ImportMask.Text,false);
+            var files = new GetFiles().FindFiles(Export.Text, ExportMask.Text,false);
             var ftp = new Ftp();
             foreach (string i in files)
             {
-
+                ftp.upload(serverAddress.Text, loginBox.Text, passBox.Text, i);
             }
 
         }
