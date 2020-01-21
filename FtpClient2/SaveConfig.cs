@@ -10,7 +10,7 @@ namespace FtpClient2
         {
             using (var sw = new System.IO.StreamWriter("Config.cfg", true))
             {
-                for (int x = 0; x < 5; x++)
+                foreach (string x in config)
                 {
                     sw.WriteLine(x);
                 }
